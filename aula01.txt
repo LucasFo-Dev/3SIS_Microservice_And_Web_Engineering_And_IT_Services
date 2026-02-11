@@ -1,0 +1,49 @@
+Ciclo-Request-Response:
+Comunicação Web através e requisição HTTP enviada do cliente ao servidor
+A resposta é um HTTP contendo o HTML ou os dado solicitado
+
+Web:
+http://localhost:8888/hello => HTTP protocol | host name | port | path
+
+HTTP request:
+GET / hello HTTP/ 1.1 => HTTP method | path | HTTP version
+
+Request = GET
+Response = respostas do servidor
+
+API = Application Programming Interface
+
+REST = estrutura da comunicação entre sistemas
+
+Recursos: JSON, XML, HTML
+
+REST = Representation State Transfer => manual de regras
+RESTful = Serviço rodando no servidor que segue o manual de regras
+
+Nível 0 POX - Não pode ser considerado REST => GET, POST, GET/POST
+
+Nível 1 - Resources - CRUD de cliente => clientes => GET, POST, PUT, DEKETE
+
+Nível 2 - Verbos HTTP - verificação se or verbos estão sendo usados de forma correta
+
+Nível 3 - HATEOAS - Hypermedla as the Engine of Application State => links para a navegação
+
+CRUD - Manipulação de dados => Creater, Read, Update, Delete
+
+
+API REST
+Controller => expõe endpoints, trata requisições HTTP, valida dados, interface entre cliente e aplicação
+Service => validar dados e verificações 
+Repository => executa as operações CRUD
+Entities => Objetos de do domínio da aplicação, mapeadas para as tabelas no banco de dados
+
+Recursos devem ser SUBSTANTIVOS e não verbos
+
+URL - Universal Resource Locator
+
+JSON - JavaScript Object Notatio
+
+Microsserviços - serviços pequenos e independentes
+Deploy independente e menor
+Debug mais complexo devido a distribuição dos serviços
+
