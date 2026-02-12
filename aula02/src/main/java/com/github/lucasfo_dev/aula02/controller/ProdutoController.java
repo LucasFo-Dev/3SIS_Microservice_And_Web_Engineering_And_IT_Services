@@ -35,13 +35,11 @@ public class ProdutoController {
     }
 
     @PostMapping
-    public ResponseEntity<ProdutoResponseDTO> createProduto{
-        @RequestBody ProdutoInputDTO inputDTO(){
+    public ResponseEntity<ProdutoResponseDTO> createProduto(@RequestBody ProdutoInputDTO inputDTO){
             ProdutoResponseDTO dto = new ProdutoResponseDTO(1L,
                     inputDTO.getNome(), inputDTO.getDescricao(), inputDTO.getValor());
 
             return ResponseEntity.created(null).body(dto);
-        }
     }
 
 }
