@@ -2,13 +2,13 @@ package com.github.lucasfo_dev.aula02.controller.dto;
 
 public class ProdutoResponseDTO {
 
-    private Long Id;
+    private Long id;
     private String nome;
     private String descricao;
     private Double valor;
 
     public ProdutoResponseDTO(Long id, String nome, String descricao, Double valor) {
-        Id = id;
+        id = id;
         this.nome = nome;
         this.descricao = descricao;
         this.valor = valor;
@@ -20,8 +20,8 @@ public class ProdutoResponseDTO {
         return responseDTO;
     }
 
-    public Long getId() {   
-        return Id;
+    public Long getId() {
+        return id;
     }
 
     public String getNome() {

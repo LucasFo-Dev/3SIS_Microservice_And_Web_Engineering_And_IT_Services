@@ -2,24 +2,24 @@ package com.github.lucasfo_dev.aula02.entities;
 
 public class Produto {
 
-    private Long Id;
+    private Long id;
     private String nome;
     private String descricao;
     private Double valor;
 
     public Produto(Long id, String nome, String descricao, Double valor) {
-        Id = id;
+        this.id = id;
         this.nome = nome;
         this.descricao = descricao;
         this.valor = valor;
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getNome() {
