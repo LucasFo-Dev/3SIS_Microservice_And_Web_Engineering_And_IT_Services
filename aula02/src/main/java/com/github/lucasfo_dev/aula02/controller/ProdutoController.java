@@ -1,13 +1,10 @@
 package com.github.lucasfo_dev.aula02.controller;
 
-import com.github.lucasfo_dev.aula02.controller.dto.ProdutoResponseDTO;
-import com.github.lucasfo_dev.aula02.entities.Produto;
+import com.github.lucasfo_dev.aula02.dto.ProdutoInputDTO;
+import com.github.lucasfo_dev.aula02.dto.ProdutoResponseDTO;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -25,10 +22,26 @@ public class ProdutoController {
 //        return ResponseEntity.ok(produtos);
 //    }
 
+//    @GetMapping
+//    public ResponseEntity<ProdutoResponseDTO> getProduto(){
+//        ProdutoResponseDTO dto = ProdutoResponseDTO.creaMock();
+//        return ResponseEntity.ok(dto);
+//    }
+
     @GetMapping
-    public ResponseEntity<ProdutoResponseDTO> getProduto(){
-        ProdutoResponseDTO dto = ProdutoResponseDTO.creaMock();
+    public ResponseEntity<List<ProdutoResponseDTO>> getProduto(){
+        List<ProdutoResponseDTO> dto = ProdutoResponseDTO.creaMock();
         return ResponseEntity.ok(dto);
+    }
+
+    @PostMapping
+    public ResponseEntity<ProdutoResponseDTO> createProduto{
+        @RequestBody ProdutoInputDTO inputDTO(){
+            ProdutoResponseDTO dto = new ProdutoResponseDTO(1L,
+                    inputDTO.getNome(), inputDTO.getDescricao(), inputDTO.getValor());
+
+            return ResponseEntity.created(null).body(dto);
+        }
     }
 
 }
